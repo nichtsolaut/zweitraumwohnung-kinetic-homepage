@@ -28,7 +28,7 @@ a{color:inherit;text-decoration:none;}
 .intro__hint{position:absolute;bottom:34px;left:50%;z-index:6;width:1px;height:46px;background:var(--white);transform-origin:top;opacity:.5;}
 
 /* 2 · Product bubbles */
-.bubbles{height:220vh;background:var(--black);margin-top:-1px;}
+.bubbles{height:180vh;background:var(--black);margin-top:-1px;}
 .bubbles__pin{background:radial-gradient(circle at 50% 44%,#101010 0%,var(--black) 62%);}
 .bubbles__vignette{position:absolute;inset:0;z-index:5;pointer-events:none;background:radial-gradient(circle at 50% 48%,transparent 56%,rgba(0,0,0,.55) 100%);}
 .bubble{top:0;z-index:3;}
@@ -64,7 +64,7 @@ a{color:inherit;text-decoration:none;}
   .intro{height:205vh;}
   .iline{font-size:22vw;letter-spacing:-.043em;line-height:.88;}
   .frag{display:none;}
-  .bubbles{height:190vh;}
+  .bubbles{height:165vh;}
   .about{padding:52px 18px 70px;}
   .about__grid{grid-template-columns:1fr;gap:28px;}
   .about__img{aspect-ratio:16/10;}

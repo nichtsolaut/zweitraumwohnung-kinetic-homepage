@@ -20,18 +20,18 @@ var IMG={
 function R(f){return IMG[f]||f;}
 
 var EARLY=[
-  {img:"panton.png",href:"https://zweitraumwohnung.com/products/panton-chair",x:15,y:43,sz:"clamp(250px,23vw,380px)"},
-  {img:"usm-sideboard.jpg",href:"https://zweitraumwohnung.com/products/usm-haller-sideboard-mit-schubladen",x:50,y:25,sz:"clamp(260px,24vw,395px)"},
-  {img:"knoll-pollock.jpg",href:"https://zweitraumwohnung.com/products/knoll-pollock-chair-schwarz",x:84,y:57,sz:"clamp(230px,21vw,340px)"},
-  {img:"tulipmarmor.jpg",href:"https://zweitraumwohnung.com/products/knoll-tulip-saarinen-esstisch-marmor-weiss",x:31,y:72,sz:"clamp(220px,20vw,330px)"},
-  {img:"fritzhansen-gelb.jpg",href:"https://zweitraumwohnung.com/products/fritz-hansen-armchair-gelb-grau",x:70,y:16,sz:"clamp(220px,20vw,330px)"}
+  {img:"panton.png",href:"https://zweitraumwohnung.com/products/panton-chair",x:16,y:34,sz:"clamp(250px,23vw,380px)"},
+  {img:"usm-sideboard.jpg",href:"https://zweitraumwohnung.com/products/usm-haller-sideboard-mit-schubladen",x:50,y:18,sz:"clamp(260px,24vw,395px)"},
+  {img:"knoll-pollock.jpg",href:"https://zweitraumwohnung.com/products/knoll-pollock-chair-schwarz",x:84,y:43,sz:"clamp(230px,21vw,340px)"},
+  {img:"tulipmarmor.jpg",href:"https://zweitraumwohnung.com/products/knoll-tulip-saarinen-esstisch-marmor-weiss",x:31,y:58,sz:"clamp(220px,20vw,330px)"},
+  {img:"fritzhansen-gelb.jpg",href:"https://zweitraumwohnung.com/products/fritz-hansen-armchair-gelb-grau",x:70,y:7,sz:"clamp(220px,20vw,330px)"}
 ];
 
 var L="clamp(285px,27vw,440px)", M="clamp(235px,23vw,360px)";
 var BUBBLES=[
-  {img:"panton.png",href:"https://zweitraumwohnung.com/products/panton-chair",x:12,sz:L,start:50,rise:210,sp:0.86,amp:5,freq:1.0,ph:0.2,rot:0.45},
-  {img:"usm-sideboard.jpg",href:"https://zweitraumwohnung.com/products/usm-haller-sideboard-mit-schubladen",x:50,sz:L,start:38,rise:205,sp:0.82,amp:4,freq:0.9,ph:0.5,rot:0.35},
-  {img:"togo-tuerkis.jpg",href:"https://zweitraumwohnung.com/products/togo-einsitzer-turkis",x:84,sz:L,start:52,rise:210,sp:0.84,amp:5,freq:1.0,ph:0.8,rot:0.45},
+  {img:"panton.png",href:"https://zweitraumwohnung.com/products/panton-chair",x:16,sz:L,start:44,rise:180,sp:0.96,amp:5,freq:1.0,ph:0.2,rot:0.45},
+  {img:"usm-sideboard.jpg",href:"https://zweitraumwohnung.com/products/usm-haller-sideboard-mit-schubladen",x:50,sz:L,start:30,rise:176,sp:0.92,amp:4,freq:0.9,ph:0.5,rot:0.35},
+  {img:"togo-tuerkis.jpg",href:"https://zweitraumwohnung.com/products/togo-einsitzer-turkis",x:82,sz:L,start:46,rise:182,sp:0.94,amp:5,freq:1.0,ph:0.8,rot:0.45},
   {img:"fritzhansen-gelb.jpg",href:"https://zweitraumwohnung.com/products/fritz-hansen-armchair-gelb-grau",x:28,sz:M,start:104,rise:218,sp:0.88,amp:7,freq:1.08,ph:2.0,rot:0.55},
   {img:"knoll-pollock.jpg",href:"https://zweitraumwohnung.com/products/knoll-pollock-chair-schwarz",x:68,sz:M,start:122,rise:220,sp:0.86,amp:6,freq:1.04,ph:1.5,rot:0.50},
   {img:"usm-hochregal.jpg",href:"https://zweitraumwohnung.com/products/usm-haller-hochregal-dunkelblau",x:16,sz:M,start:176,rise:230,sp:0.72,amp:5,freq:0.92,ph:1.0,rot:0.35},
