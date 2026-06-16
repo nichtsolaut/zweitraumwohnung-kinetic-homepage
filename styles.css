@@ -1,0 +1,111 @@
+:root{
+    --black:#070707;
+    --white:#ffffff;
+    --bone:#f1efe9;
+    --red:#ff0d0d;
+    --grotesk:"Helvetica Neue",Helvetica,Arial,"Liberation Sans",sans-serif;
+    --mono:ui-monospace,"SF Mono","Menlo","Consolas","Liberation Mono",monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background:var(--black);}
+  body{font-family:var(--grotesk);color:var(--white);background:var(--black);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+
+  .mark{position:fixed;top:22px;left:24px;z-index:80;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--white);mix-blend-mode:difference;}
+
+  .stage{position:relative;}
+  .pin{position:sticky;top:0;height:100vh;overflow:hidden;}
+
+  /* ============================== 1 · SPATIAL TYPE TUNNEL ============================== */
+  .intro{height:300vh;background:var(--black);}
+  .intro__pin{background:var(--black);perspective:1100px;perspective-origin:50% 50%;}
+  .intro__scene{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .iline{
+    position:relative;display:block;color:var(--white);font-weight:800;text-transform:uppercase;
+    letter-spacing:-.06em;line-height:.80;font-size:21vw;white-space:nowrap;
+    will-change:transform,opacity;backface-visibility:hidden;
+  }
+  /* faint architectural frames that share the depth */
+  .plane{position:absolute;will-change:transform,opacity;backface-visibility:hidden;pointer-events:none;}
+  .plane--f1{top:16%;left:9%;width:18vw;height:18vw;border:1.5px solid rgb(255 255 255 / .5);}
+  .plane--f2{bottom:15%;right:10%;width:26vw;height:13vw;border:1.5px solid rgb(255 255 255 / .42);}
+  .plane--f3{top:50%;left:46%;width:8vw;height:8vw;border:1.5px solid rgb(255 255 255 / .55);}
+  .intro__hint{position:absolute;bottom:34px;left:50%;z-index:6;width:1px;height:46px;background:var(--white);transform-origin:top;opacity:.5;}
+  .intro__cap{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:6;
+    font-family:var(--mono);font-size:12px;letter-spacing:.34em;color:rgb(255 255 255 / .62);text-transform:uppercase;white-space:nowrap;}
+
+  /* ============================== 2 · RISING PRODUCT BUBBLES (white, on black) ============================== */
+  .bubbles{height:520vh;background:var(--black);}
+  .bubbles__pin{background:
+      radial-gradient(circle at 50% 50%, #141414 0%, #070707 62%);}
+  .bubbles__depth{position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(circle at 50% 46%, rgb(255 255 255 / .05) 0%, transparent 46%);}
+  .bubbles__vignette{position:absolute;inset:0;z-index:5;pointer-events:none;
+    background:radial-gradient(circle at 50% 48%, transparent 56%, rgb(0 0 0 / .62) 100%);}
+  .bubble{
+    position:absolute;top:0;z-index:3;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(circle at 32% 26%, rgb(255 255 255 / .22), rgb(255 255 255 / .05) 60%, rgb(255 255 255 / .02));
+    border:1.5px solid rgb(255 255 255 / .62);
+    box-shadow:inset 0 0 40px rgb(255 255 255 / .12), 0 22px 60px rgb(0 0 0 / .5);
+    backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);
+    will-change:transform,opacity;
+  }
+  .bubble::after{content:"";position:absolute;top:9%;left:14%;width:26%;height:18%;border-radius:50%;
+    background:radial-gradient(circle, rgb(255 255 255 / .8), transparent 70%);filter:blur(2px);opacity:.7;}
+  .bubble__disc{width:80%;height:80%;border-radius:50%;background:var(--white);overflow:hidden;
+    display:flex;align-items:center;justify-content:center;}
+  .bubble__disc img{width:86%;height:86%;object-fit:contain;}
+
+  /* ============================== 3 · ALL ABOUT DESIGN (black editorial) ============================== */
+  .about{height:200vh;background:var(--black);}
+  .about__pin{background:var(--black);display:flex;align-items:center;justify-content:center;text-align:center;}
+  .about__inner{position:relative;z-index:2;padding:0 24px;will-change:transform,opacity;}
+  .about__inner h2{font-size:clamp(54px,11vw,200px);font-weight:800;letter-spacing:-.055em;line-height:.86;}
+  .about__inner h2 .dot{color:var(--red);}
+  .about__inner p{margin:clamp(26px,3.4vw,46px) auto 0;font-size:clamp(15px,1.5vw,22px);line-height:1.5;
+    max-width:42ch;color:rgb(255 255 255 / .62);font-family:var(--mono);letter-spacing:.01em;}
+  .about__kick{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.36em;text-transform:uppercase;
+    color:rgb(255 255 255 / .5);margin-bottom:clamp(22px,3vw,40px);}
+
+  /* ============================== 4 · GARAGE HERO + SHOP NOW ============================== */
+  .shop{position:relative;min-height:108vh;overflow:hidden;background:#111;}
+  .shop__media{position:absolute;inset:-8% 0;will-change:transform;}
+  .shop__media img{width:100%;height:100%;object-fit:cover;object-position:54% 42%;}
+  .shop__overlay{position:absolute;inset:0;
+    background:linear-gradient(180deg, rgb(7 7 7 / .55) 0%, rgb(7 7 7 / .2) 32%, rgb(7 7 7 / .25) 60%, rgb(7 7 7 / .82) 100%);}
+  .shop__inner{position:relative;z-index:2;min-height:108vh;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:clamp(40px,9vh,120px) clamp(24px,7vw,120px);}
+  .shop__kick{font-family:var(--mono);font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:rgb(255 255 255 / .8);}
+  .shop__head{margin-top:18px;font-size:clamp(40px,7.4vw,128px);font-weight:800;letter-spacing:-.05em;line-height:.9;max-width:16ch;}
+  .shop__cta{margin-top:clamp(26px,3.6vw,46px);}
+  .shop__btn{display:inline-flex;align-items:center;gap:.7em;background:var(--red);color:var(--white);
+    font-weight:700;font-size:clamp(17px,1.7vw,24px);letter-spacing:.01em;padding:.78em 1.5em;border-radius:2px;
+    transition:transform .18s ease, background-color .18s ease;}
+  .shop__btn:hover{transform:translateY(-2px);background:#ff2a2a;}
+  .shop__btn .arr{font-family:var(--mono);transition:transform .18s ease;}
+  .shop__btn:hover .arr{transform:translateX(4px);}
+
+  /* ============================== 5 · CODE MENU (unchanged) ============================== */
+  .menu{position:relative;background:var(--black);color:var(--white);min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(60px,12vh,140px) clamp(24px,7vw,120px);}
+  .menu__scene{position:absolute;top:0;left:0;right:0;height:46vh;background:linear-gradient(180deg,#b00000,var(--black));z-index:0;}
+  .menu__list{position:relative;z-index:1;display:flex;flex-direction:column;gap:clamp(6px,1.2vh,16px);}
+  .menu__list a{
+    font-family:var(--mono);font-weight:500;font-size:clamp(36px,7vw,108px);line-height:1.02;letter-spacing:-.01em;
+    color:var(--white);width:fit-content;padding:.04em .12em .04em 0;transition:background-color .12s,color .12s,padding .15s ease;
+  }
+  .menu__list a:hover{background:var(--red);color:var(--black);padding-left:.18em;padding-right:.18em;}
+  .menu__foot{position:relative;z-index:1;margin-top:clamp(40px,8vh,90px);font-family:var(--mono);font-size:12px;color:rgb(255 255 255 / .5);letter-spacing:.04em;}
+
+  /* ============================== RESPONSIVE ============================== */
+  @media (max-width:760px){
+    .iline{font-size:27vw;letter-spacing:-.045em;}
+    .about__inner h2{font-size:18vw;}
+    .bubbles{height:440vh;}
+    .bubble[data-m="hide"]{display:none;}
+    .shop__head{font-size:11vw;}
+  }
+  @media (prefers-reduced-motion:reduce){ .intro__hint{display:none;} }
