@@ -93,8 +93,8 @@ function render(){
     var nearFade=clamp(map(z,390,840,1,0),0,1);
     var earlyFade=1-clamp(map(p1,0.73,0.98,0,1),0,1)*0.82;
     var isFrag=Ln.el.classList.contains("frag");
-    var fragReveal=isFrag ? map(p1,0.08,0.34,0.16,1) : 1;
-    var fragControl=isFrag ? (0.48+Ln.d*0.34) : 1;
+    var fragReveal=isFrag ? map(p1,0.10,0.38,0.08,0.86) : 1;
+    var fragControl=isFrag ? (0.34+Ln.d*0.30) : 1;
     var txm=reduce?0:mx*Ln.mx*mAtt;
     var tym=reduce?0:my*Ln.my*mAtt;
     var rz=reduce?0:mx*Ln.d*1.6*mAtt;
