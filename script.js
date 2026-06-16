@@ -85,7 +85,7 @@ function render(){
   mx=lerp(mx,tmx,0.105); my=lerp(my,tmy,0.105);
   var p1=prog(intro);
   var mAtt=1-clamp(map(p1,0.72,1.0,0,1),0,1);
-  scene.style.transform="rotateX("+(-my*13*mAtt).toFixed(2)+"deg) rotateY("+(mx*17*mAtt).toFixed(2)+"deg)";
+  scene.style.transform="translateY(3vh) rotateX("+(-my*13*mAtt).toFixed(2)+"deg) rotateY("+(mx*17*mAtt).toFixed(2)+"deg)";
 
   for(var li=0;li<layerEls.length;li++){
     var Ln=layerEls[li];
