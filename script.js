@@ -92,11 +92,14 @@ function render(){
     var z=(Ln.z0+p1*Ln.zr)*DEPTH;
     var nearFade=clamp(map(z,390,840,1,0),0,1);
     var earlyFade=1-clamp(map(p1,0.73,0.98,0,1),0,1)*0.82;
+    var isFrag=Ln.el.classList.contains("frag");
+    var fragReveal=isFrag ? map(p1,0.08,0.34,0.16,1) : 1;
+    var fragControl=isFrag ? (0.48+Ln.d*0.34) : 1;
     var txm=reduce?0:mx*Ln.mx*mAtt;
     var tym=reduce?0:my*Ln.my*mAtt;
     var rz=reduce?0:mx*Ln.d*1.6*mAtt;
     Ln.el.style.transform="translateZ("+z.toFixed(0)+"px) translateX("+txm.toFixed(1)+"px) translateY("+tym.toFixed(1)+"px) rotateZ("+rz.toFixed(2)+"deg)";
-    Ln.el.style.opacity=(nearFade*earlyFade).toFixed(3);
+    Ln.el.style.opacity=(nearFade*earlyFade*fragReveal*fragControl).toFixed(3);
     Ln.el.style.filter="blur("+map(z,620,900,0,2.2).toFixed(2)+"px)";
   }
 
