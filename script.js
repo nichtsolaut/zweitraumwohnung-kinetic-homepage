@@ -15,7 +15,8 @@ var IMG={
   "usm-hochregal.jpg":"https://zweitraumwohnung.com/cdn/shop/files/hochregalusm.jpg?v=1775739784&width=900",
   "knoll-tulip-couch.jpg":"https://zweitraumwohnung.com/cdn/shop/files/knolltulip.jpg?v=1777286006&width=900",
   "tulipmarmor.jpg":"https://zweitraumwohnung.com/cdn/shop/files/tulipmarmor.jpg?v=1776273465&width=900",
-  "teak-tisch.jpg":"https://zweitraumwohnung.com/cdn/shop/files/teaktischweisshintergrund.jpg?v=1772813837&width=900"
+  "teak-tisch.jpg":"https://zweitraumwohnung.com/cdn/shop/files/teaktischweisshintergrund.jpg?v=1772813837&width=900",
+  "gavina-armchair.jpg":"https://zweitraumwohnung.com/cdn/shop/files/gavinafreischwingermitarmen.jpg?v=1776950012&width=900"
 };
 function R(f){return IMG[f]||f;}
 
@@ -31,7 +32,7 @@ var L="clamp(285px,27vw,440px)", M="clamp(235px,23vw,360px)";
 var BUBBLES=[
   {img:"panton.png",href:"https://zweitraumwohnung.com/products/panton-chair",x:16,sz:L,start:44,rise:180,sp:0.96,amp:5,freq:1.0,ph:0.2,rot:0.45},
   {img:"usm-sideboard.jpg",href:"https://zweitraumwohnung.com/products/usm-haller-sideboard-mit-schubladen",x:50,sz:L,start:30,rise:176,sp:0.92,amp:4,freq:0.9,ph:0.5,rot:0.35},
-  {img:"togo-tuerkis.jpg",href:"https://zweitraumwohnung.com/products/togo-einsitzer-turkis",x:82,sz:L,start:46,rise:182,sp:0.94,amp:5,freq:1.0,ph:0.8,rot:0.45},
+  {img:"gavina-armchair.jpg",href:"https://zweitraumwohnung.com/products/gavina-freischwinger-wiener-geflecht",x:82,sz:L,start:46,rise:182,sp:0.94,amp:5,freq:1.0,ph:0.8,rot:0.45},
   {img:"fritzhansen-gelb.jpg",href:"https://zweitraumwohnung.com/products/fritz-hansen-armchair-gelb-grau",x:28,sz:M,start:104,rise:218,sp:0.88,amp:7,freq:1.08,ph:2.0,rot:0.55},
   {img:"knoll-pollock.jpg",href:"https://zweitraumwohnung.com/products/knoll-pollock-chair-schwarz",x:68,sz:M,start:122,rise:220,sp:0.86,amp:6,freq:1.04,ph:1.5,rot:0.50},
   {img:"usm-hochregal.jpg",href:"https://zweitraumwohnung.com/products/usm-haller-hochregal-dunkelblau",x:16,sz:M,start:176,rise:230,sp:0.72,amp:5,freq:0.92,ph:1.0,rot:0.35},
